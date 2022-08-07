@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.grid_body{
+    display: grid;
+
+    grid-template-columns: 200px 150px 300px;
+    grid-template-rows: 110px 100px;
+}
+
+.gridItem{
+    text-align: center;
+    border: 2px dashed black;
+}
