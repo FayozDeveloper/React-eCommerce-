@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import {useSelector} from "react-redux";
-import Cart from "./Cart";
+
 
 function Navbar(props) {
     const state = useSelector((state) => state.handleCart) //need for show cart length

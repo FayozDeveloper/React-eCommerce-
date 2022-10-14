@@ -27,7 +27,6 @@ const Cart = () => {
         )
     }
     const cartItems = (product) => {
-
         return(
                 <div className="px-4 my-5 bg-light rounded-3 py-5" key={product.id}>
                     <div className="container py-4">

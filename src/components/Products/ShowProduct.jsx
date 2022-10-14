@@ -1,9 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 
-function ShowProduct(props) {
-
-    const {data, setFilter, filter} = props
+function ShowProduct({data, setFilter, filter}) {
 
     const filterProduct = (event) => {
         const updateProduct = data.filter((name)=>name.category === event)
@@ -14,23 +12,25 @@ function ShowProduct(props) {
     return (
         <>
             <div className='buttons d-flex justify-content-center mb-5 pb-5'>
-                <button className='btn btn-outline-danger me-2' onClick={()=>setFilter(data)}>All</button>
-                <button
-                    className='btn btn-outline-secondary me-2'
-                    onClick={()=>filterProduct("men's clothing")}
-                >Men's clothing</button>
-                <button
-                    className='btn btn-outline-info me-2'
-                    onClick={()=>filterProduct("women's clothing")}
-                >Women's clothing</button>
-                <button
-                    className='btn btn-outline-warning me-2'
-                    onClick={()=>filterProduct("jewelery")}
-                >Jewelery</button>
-                <button
-                    className='btn btn-outline-primary me-2'
-                    onClick={()=>filterProduct('electronics')}
-                >Electronics</button>
+                <div>
+                    <button className='btn btn-outline-danger me-2 mb-3' onClick={()=>setFilter(data)}>All</button>
+                    <button
+                        className='btn btn-outline-secondary me-2 mb-3'
+                        onClick={()=>filterProduct("men's clothing")}
+                    >Men's clothing</button>
+                    <button
+                        className='btn btn-outline-info me-2 mb-3'
+                        onClick={()=>filterProduct("women's clothing")}
+                    >Women's clothing</button>
+                    <button
+                        className='btn btn-outline-warning me-2 mb-3'
+                        onClick={()=>filterProduct("jewelery")}
+                    >Jewelery</button>
+                    <button
+                        className='btn btn-outline-primary me-2 mb-3'
+                        onClick={()=>filterProduct('electronics')}
+                    >Electronics</button>
+                </div>
             </div>
 
             {filter.map((product)=>{

@@ -25,7 +25,7 @@ function Product(props) {
 
         getProduct()
 
-    },[])
+    },[id])
 
     const Loading = () =>{
         return (
